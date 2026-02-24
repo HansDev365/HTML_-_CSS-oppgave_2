@@ -1,0 +1,87 @@
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: 'Cutive Mono', monospace;
+  background: #eee;
+}
+
+/* Center only the cards section */
+.cars{
+  min-height: calc(100vh - 60px); /* 60px navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* the 3-column wrapper */
+.cars .container{
+  width: min(920px, 92vw);
+  display: flex;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 0; /* important */
+}
+
+/* each column */
+.car{
+  flex: 1;
+  padding: 48px 44px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.car h2{
+  margin: 0;
+  letter-spacing: 2px;
+  font-size: 32px;
+  font-family: 'Big Shoulders', sans-serif;
+}
+
+.car p{
+  margin: 0;
+  line-height: 1.7;
+  opacity: .85;
+  max-width: 28ch;
+}
+
+.btn{
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: hsl(0, 0%, 95%);
+  color: #222;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.car .btn:hover{
+  background: transparent;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.btn:active{
+  transform: scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* colors */
+.sedans{ background: hsl(31, 77%, 52%); }
+.suvs{ background: hsl(184, 100%, 22%); }
+.luxury{ background: hsl(179, 100%, 13%); }
+
+/* responsive */
+@media (max-width: 760px){
+  .cars .container{ flex-direction: column; }
+}
+
+
