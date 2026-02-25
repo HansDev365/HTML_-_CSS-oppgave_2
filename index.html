@@ -11,10 +11,10 @@
     <!-- Google Fonts links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Cutive+Mono&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Deca:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
         rel="stylesheet">
 </head>
 
@@ -25,13 +25,39 @@
             <div class="logo" href="index.html">
                 <img src="/images/AutoShop.png" alt="Auto Shop" width="90" />
             </div>
-            <ul class="nav__links">
-                <li><a class="nav__link is-active" href="#Cars for Sale">Cars for Sale</a></li>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a class="nav_link is-active" href="index.html">Home</a></li>
+                <li><a class="nav__link is-active" href="cars_for_sale.html">Cars for Sale</a></li>
                 <li><a class="nav__link" href="#New Cars">New Cars</a></li>
                 <li><a class="nav__link" href="#News & Videos">News & Videos</a></li>
             </ul>
+            <ul>
+                <li class="hideOnMobile"><a class="nav_link is-active" href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a class="nav__link is-active" href="cars_for_sale.html">Cars for Sale</a></li>
+                <li class="hideOnMobile"><a class="nav__link" href="#New Cars">New Cars</a></li>
+                <li class="hideOnMobile"><a class="nav__link" href="#News & Videos">News & Videos</a></li>
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
         </div>
     </nav>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
 
     <section class="cars">
         <div class="container">
@@ -42,7 +68,7 @@
                     spacious interior, large trunk, and stable handling, ensuring comfort, safety, and a classic,
                     timeless style.
                 </p>
-                <button class="btn" href="#">Learn More</button>
+                <a class="btn" href="sedans.html">Learn More</a>
             </article>
 
             <article class="car suvs">
@@ -52,7 +78,7 @@
                     engines. They perform well in the city and off-road, offering travel comfort, family
                     safety, and large cargo space for every occasion.</p>
 
-                <button class="btn" href="#">Learn More</button>
+                <a class="btn" href="suvs.html">Learn More</a>
             </article>
 
             <article class="car luxury">
@@ -61,11 +87,16 @@
                 <p>Luxury cars offer the highest level of comfort, prestige, and modern technology. They
                     feature elegant design, powerful engines, and exceptional interior finishes, providing
                     unforgettable driving experiences and maximum safety.!</p>
-                <button class="btn" href="#">Learn More</button>
+                <a class="btn" href="luxury.html">Learn More</a>
             </article>
         </div>
     </section>
-
+    <!-- footer is the same on all pages. This is controlled in style.css.  -->
+    <footer class="site-footer">© 2026 All rights reserved.
+        <address>
+            Written By<a href="dorian365.kodehode@gmail.com">HansDev365</a>.<br>
+        </address>
+    </footer>
 </body>
 
 </html>

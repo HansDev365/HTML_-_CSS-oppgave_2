@@ -1,87 +1,132 @@
-* { box-sizing: border-box; }
-
-body{
-  margin: 0;
-  font-family: 'Cutive Mono', monospace;
-  background: #eee;
+* {
+	box-sizing: border-box;
 }
 
-/* Center only the cards section */
-.cars{
-  min-height: calc(100vh - 60px); /* 60px navbar height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 16px;
+/* Body as vertical flex layout */
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Lexend Deca', sans-serif;
+	background: #eee;
+}
+
+/* Center only the cars section */
+.cars {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 16px;
 }
 
 /* the 3-column wrapper */
-.cars .container{
-  width: min(920px, 92vw);
-  display: flex;
-  border-radius: 14px;
-  overflow: hidden;
-  padding: 0; /* important */
+.cars .container {
+	width: min(920px, 92vw);
+	display: flex;
+	border-radius: 14px;
+	overflow: hidden;
+	padding: 0;
 }
 
 /* each column */
-.car{
-  flex: 1;
-  padding: 48px 44px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+.car {
+	flex: 1;
+	padding: 48px 44px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
 }
 
-.car h2{
-  margin: 0;
-  letter-spacing: 2px;
-  font-size: 32px;
-  font-family: 'Big Shoulders', sans-serif;
+.car h2 {
+	margin: 0;
+	font-family: 'Big Shoulders Display', sans-serif;
+	font-size: 40px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
-.car p{
-  margin: 0;
-  line-height: 1.7;
-  opacity: .85;
-  max-width: 28ch;
+.car p {
+	margin: 0;
+	line-height: 1.7;
+	opacity: 0.85;
+	max-width: 28ch;
+	font-size: 15px;
 }
 
-.btn{
-  margin-top: auto;
-  align-self: flex-start;
-  padding: 12px 26px;
-  border-radius: 999px;
-  background: hsl(0, 0%, 95%);
-  color: #222;
-  font-weight: 600;
-  border: 2px solid #ffffff;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* Learn more buttons */
+.btn {
+	margin-top: auto;
+	align-self: flex-start;
+
+	display: inline-block;
+	padding: 12px 28px;
+	border-radius: 999px;
+
+	background: hsl(0, 0%, 95%);
+	border: none;
+
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
+
+	transition: all 0.3s ease;
+	cursor: pointer;
 }
 
-.car .btn:hover{
-  background: transparent;
-  color: #ffffff;
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+/* Text color matches card */
+.sedans .btn {
+	color: hsl(31, 77%, 52%);
 }
 
-.btn:active{
-  transform: scale(0.98);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.suvs .btn {
+	color: hsl(184, 100%, 22%);
 }
 
+.luxury .btn {
+	color: hsl(179, 100%, 13%);
+}
 
-/* colors */
-.sedans{ background: hsl(31, 77%, 52%); }
-.suvs{ background: hsl(184, 100%, 22%); }
-.luxury{ background: hsl(179, 100%, 13%); }
+/* Hover effect */
+.car .btn:hover {
+	background: transparent;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	transform: scale(1.05);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+	transform: scale(0.98);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* box colors */
+.sedans {
+	background: hsl(31, 77%, 52%);
+}
+
+.suvs {
+	background: hsl(184, 100%, 22%);
+}
+
+.luxury {
+	background: hsl(179, 100%, 13%);
+}
+
+/* Footer */
+.site-footer {
+	margin-top: auto; /* pushes footer to bottom */
+	text-align: center;
+	padding: 20px;
+	color: rgba(0, 0, 0, 0.8);
+}
 
 /* responsive */
-@media (max-width: 760px){
-  .cars .container{ flex-direction: column; }
+@media (max-width: 760px) {
+	.cars .container {
+		flex-direction: column;
+	}
 }
-
-
