@@ -1,132 +1,119 @@
+/* RESET */
 * {
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body as vertical flex layout */
+/* PAGE BASE */
 body {
-	margin: 0;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	font-family: 'Lexend Deca', sans-serif;
-	background: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lexend Deca', sans-serif;
+  background: #eee;
+}
+
+main {
+  flex: 1;
 }
 
 /* Center only the cars section */
 .cars {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 40px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
 }
 
-/* the 3-column wrapper */
-.cars .container {
-	width: min(920px, 92vw);
-	display: flex;
-	border-radius: 14px;
-	overflow: hidden;
-	padding: 0;
+/* 3-column wrapper (renamed to avoid conflict with navbar) */
+.cars-container {
+  width: min(920px, 92vw);
+  display: flex;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 /* each column */
 .car {
-	flex: 1;
-	padding: 48px 44px;
-	color: #fff;
-	display: flex;
-	flex-direction: column;
-	gap: 18px;
+  flex: 1;
+  padding: 48px 44px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .car h2 {
-	margin: 0;
-	font-family: 'Big Shoulders Display', sans-serif;
-	font-size: 40px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .car p {
-	margin: 0;
-	line-height: 1.7;
-	opacity: 0.85;
-	max-width: 28ch;
-	font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 28ch;
+  font-size: 15px;
 }
 
 /* Learn more buttons */
 .btn {
-	margin-top: auto;
-	align-self: flex-start;
-
-	display: inline-block;
-	padding: 12px 28px;
-	border-radius: 999px;
-
-	background: hsl(0, 0%, 95%);
-	border: none;
-
-	font-family: 'Lexend Deca', sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	text-decoration: none;
-
-	transition: all 0.3s ease;
-	cursor: pointer;
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: hsl(0, 0%, 95%);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.25s ease;
 }
 
 /* Text color matches card */
-.sedans .btn {
-	color: hsl(31, 77%, 52%);
-}
+.sedans .btn { color: hsl(31, 77%, 52%); }
+.suvs .btn { color: hsl(184, 100%, 22%); }
+.luxury .btn { color: hsl(179, 100%, 13%); }
 
-.suvs .btn {
-	color: hsl(184, 100%, 22%);
-}
-
-.luxury .btn {
-	color: hsl(179, 100%, 13%);
-}
-
-/* Hover effect */
 .car .btn:hover {
-	background: transparent;
-	color: #ffffff;
-	border: 2px solid #ffffff;
-	transform: scale(1.05);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.btn:active {
-	transform: scale(0.98);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  transform: translateY(-2px);
 }
 
 /* box colors */
-.sedans {
-	background: hsl(31, 77%, 52%);
+.sedans { background: hsl(31, 77%, 52%); }
+.suvs { background: hsl(184, 100%, 22%); }
+.luxury { background: hsl(179, 100%, 13%); }
+
+/* Anchor sections, so navbar links scroll correctly */
+.anchor-section {
+  padding: 60px 16px;
+  width: min(920px, 92vw);
+  margin: 0 auto;
 }
 
-.suvs {
-	background: hsl(184, 100%, 22%);
-}
-
-.luxury {
-	background: hsl(179, 100%, 13%);
+.anchor-section h2 {
+  margin-bottom: 10px;
 }
 
 /* Footer */
 .site-footer {
-	margin-top: auto; /* pushes footer to bottom */
-	text-align: center;
-	padding: 20px;
-	color: rgba(0, 0, 0, 0.8);
+  margin-top: auto;
+  text-align: center;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-/* responsive */
-@media (max-width: 760px) {
-	.cars .container {
-		flex-direction: column;
-	}
+.site-footer a {
+  color: inherit;
+}
+
+/* responsive cars layout */
+@media (max-width: 900px) {
+  .cars-container {
+    flex-direction: column;
+  }
 }
