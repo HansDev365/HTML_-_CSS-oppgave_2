@@ -24,7 +24,7 @@
     <nav class="nav-bar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="/images/AutoShop.png" alt="Auto Shop" width="90" />
+                <img rel="preload" fetchpriority="high" src="/images/AutoShop.png" alt="Auto Shop" width="90" />
             </a>
 
             <ul class="nav-links">
@@ -56,7 +56,7 @@
         <section class="cars" id="home">
             <div class="cars-container">
                 <article class="car sedans">
-                    <img src="images/icon-sedans.svg" alt="Sedans" />
+                    <img rel="preload" fetchpriority="high" src="images/icon-sedans.svg" alt="Sedans" />
                     <h2>SEDANS</h2>
                     <p>
                         Sedans are elegant and comfortable cars, ideal for city driving and longer trips. They offer a
@@ -67,7 +67,7 @@
                 </article>
 
                 <article class="car suvs">
-                    <img src="images/icon-suvs.svg" alt="SUVs" />
+                    <img rel="preload" fetchpriority="high" src="images/icon-suvs.svg" alt="SUVs" />
                     <h2>SUVS</h2>
                     <p>
                         SUVs are versatile vehicles combining spaciousness, higher suspension, and powerful engines.
@@ -77,7 +77,7 @@
                 </article>
 
                 <article class="car luxury">
-                    <img src="images/icon-luxury.svg" alt="Luxury" />
+                    <img rel="preload" fetchpriority="high" src="images/icon-luxury.svg" alt="Luxury" />
                     <h2>LUXURY</h2>
                     <p>
                         Luxury cars offer top comfort, prestige, and modern technology. Elegant design, powerful
@@ -90,7 +90,8 @@
         </section>
 
         <!-- Anchor targets so nav links work -->
-        <section id="new-cars" class="anchor-section">
+        <section id="new-cars" class="anchor-section dark">
+            <div class="container">
             <h2>New Cars</h2>
             <p>Buying a new car is an exciting experience for many people. A new car offers modern technology, improved
                 safety features, and better fuel efficiency compared to older models. The fresh smell, clean interior,
@@ -99,9 +100,11 @@
                 addition, they usually include a warranty, which gives buyers peace of mind and protection against
                 unexpected repairs. Although new cars can be more expensive, they provide reliability, lower maintenance
                 costs at first, and the satisfaction of owning something completely new and dependable.</p>
+                </div>
         </section>
 
-        <section id="news-videos" class="anchor-section">
+        <section id="news-videos" class="anchor-section light">
+            <div class="container">
             <h2>News &amp; Videos</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, sapiente ipsum unde sit inventore
                 quasi? Tempora voluptatibus eos tenetur dolorem cumque dolorum voluptates iste eligendi impedit porro,
@@ -126,6 +129,7 @@
                 beatae, ducimus eos harum saepe, delectus perspiciatis, expedita suscipit iusto obcaecati veritatis
                 praesentium molestiae. Provident, ipsum alias corrupti minima facere similique ad, quo quibusdam ut
                 soluta eum iure hic nemo suscipit consequuntur voluptatibus sunt doloremque earum numquam quos amet.</p>
+                </div>
         </section>
 
     </main>
