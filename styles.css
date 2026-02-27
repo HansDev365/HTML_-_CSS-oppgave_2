@@ -122,11 +122,10 @@ main {
 }
 
 .dark {
-	background-color: rgba(211, 156, 48, 0.359);
+	background-color: rgba(200, 200, 200, 0.632);
 }
 
 .light {
-	background-color: rgba(131, 85, 25, 0.498);
 }
 
 /* Footer */
