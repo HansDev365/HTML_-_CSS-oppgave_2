@@ -9,6 +9,7 @@
     <!-- Navbar + main styles -->
     <link rel="stylesheet" href="styles_nav-bar.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="image" href="images/AutoShop-90.png" type="image/png" fetchpriority="high">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,9 @@
     <nav class="nav-bar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img rel="preload" fetchpriority="high" src="/images/AutoShop.png" alt="Auto Shop" width="90" />
+                <img src="images/AutoShop-90.png" srcset="images/AutoShop-90.png 1x, images/AutoShop-180.png 2x"
+                    sizes="44px" alt="Auto Shop" width="90" height="90" loading="eager" decoding="async"
+                    fetchpriority="high" />
             </a>
 
             <ul class="nav-links">
@@ -56,7 +59,7 @@
         <section class="cars" id="home">
             <div class="cars-container">
                 <article class="car sedans">
-                    <img rel="preload" fetchpriority="high" src="images/icon-sedans.svg" alt="Sedans" />
+                    <img src="images/icon-sedans.svg" alt="Sedans" width="64" height="40" decoding="async" />
                     <h2>SEDANS</h2>
                     <p>
                         Sedans are elegant and comfortable cars, ideal for city driving and longer trips. They offer a
@@ -67,7 +70,7 @@
                 </article>
 
                 <article class="car suvs">
-                    <img rel="preload" fetchpriority="high" src="images/icon-suvs.svg" alt="SUVs" />
+                    <img src="images/icon-suvs.svg" alt="SUVs" width="64" height="40" decoding="async" />
                     <h2>SUVS</h2>
                     <p>
                         SUVs are versatile vehicles combining spaciousness, higher suspension, and powerful engines.
@@ -77,7 +80,7 @@
                 </article>
 
                 <article class="car luxury">
-                    <img rel="preload" fetchpriority="high" src="images/icon-luxury.svg" alt="Luxury" />
+                    <img src="images/icon-luxury.svg" alt="Luxury" width="64" height="40" decoding="async" />
                     <h2>LUXURY</h2>
                     <p>
                         Luxury cars offer top comfort, prestige, and modern technology. Elegant design, powerful
@@ -92,44 +95,58 @@
         <!-- Anchor targets so nav links work -->
         <section id="new-cars" class="anchor-section dark">
             <div class="container">
-            <h2>New Cars</h2>
-            <p>Buying a new car is an exciting experience for many people. A new car offers modern technology, improved
-                safety features, and better fuel efficiency compared to older models. The fresh smell, clean interior,
-                and smooth performance make driving more enjoyable and comfortable. Many new cars also come with
-                advanced systems like touchscreen displays, parking sensors, and driver assistance features. In
-                addition, they usually include a warranty, which gives buyers peace of mind and protection against
-                unexpected repairs. Although new cars can be more expensive, they provide reliability, lower maintenance
-                costs at first, and the satisfaction of owning something completely new and dependable.</p>
-                </div>
+                <h2>New Cars</h2>
+                <p>Buying a new car is an exciting experience for many people. A new car offers modern technology,
+                    improved
+                    safety features, and better fuel efficiency compared to older models. The fresh smell, clean
+                    interior,
+                    and smooth performance make driving more enjoyable and comfortable. Many new cars also come with
+                    advanced systems like touchscreen displays, parking sensors, and driver assistance features. In
+                    addition, they usually include a warranty, which gives buyers peace of mind and protection against
+                    unexpected repairs. Although new cars can be more expensive, they provide reliability, lower
+                    maintenance
+                    costs at first, and the satisfaction of owning something completely new and dependable.</p>
+            </div>
         </section>
 
         <section id="news-videos" class="anchor-section light">
             <div class="container">
-            <h2>News &amp; Videos</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, sapiente ipsum unde sit inventore
-                quasi? Tempora voluptatibus eos tenetur dolorem cumque dolorum voluptates iste eligendi impedit porro,
-                sit voluptas iure pariatur doloribus, magni eaque et eveniet numquam? Quis, laboriosam quisquam
-                cupiditate quo maxime impedit, explicabo voluptates blanditiis nisi fugiat quaerat. Quod laudantium,
-                repudiandae odit aliquid error veniam sint ullam ut consectetur beatae eaque consequuntur totam corporis
-                doloribus perferendis reiciendis dolorem facilis ex repellendus ratione sapiente? Dolor quo libero
-                quisquam sunt repellendus, repellat ducimus saepe minus rem alias quidem excepturi voluptate?
-                Dignissimos quidem iste, possimus provident corrupti quod odio ullam a autem debitis. Eius voluptatibus,
-                vel quos ea tempora, doloremque quae in saepe ducimus, mollitia molestiae quo deleniti? Ad cum totam id
-                distinctio quo quidem quia, cumque omnis quis voluptates dignissimos sunt deserunt ratione porro ut ab
-                blanditiis sint molestias tenetur commodi inventore? Assumenda, officiis sequi. Nobis repellendus
-                possimus odit accusantium, reprehenderit soluta excepturi deleniti. Provident beatae voluptates
-                praesentium animi sit totam doloribus numquam accusamus harum obcaecati dicta, laborum blanditiis minima
-                aliquam excepturi omnis autem mollitia ea et! Explicabo hic dignissimos delectus ducimus animi, neque
-                quaerat voluptatum atque deserunt, possimus tempore facere nemo odit consectetur corporis itaque
-                provident harum eligendi quidem. Illo et amet voluptates quas similique voluptatum expedita quibusdam
-                facere laudantium. Eum dolorem consectetur nulla harum odio unde molestias blanditiis quisquam tenetur
-                adipisci! Odit quidem vero corporis temporibus voluptates odio et veritatis non doloremque enim
-                laboriosam alias consequatur excepturi laudantium cupiditate dolor nesciunt fugiat eius assumenda
-                tenetur, sint ex necessitatibus architecto minima? Nam omnis dolor ad quis quod placeat fugiat numquam
-                beatae, ducimus eos harum saepe, delectus perspiciatis, expedita suscipit iusto obcaecati veritatis
-                praesentium molestiae. Provident, ipsum alias corrupti minima facere similique ad, quo quibusdam ut
-                soluta eum iure hic nemo suscipit consequuntur voluptatibus sunt doloremque earum numquam quos amet.</p>
-                </div>
+                <h2>News &amp; Videos</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, sapiente ipsum unde sit inventore
+                    quasi? Tempora voluptatibus eos tenetur dolorem cumque dolorum voluptates iste eligendi impedit
+                    porro,
+                    sit voluptas iure pariatur doloribus, magni eaque et eveniet numquam? Quis, laboriosam quisquam
+                    cupiditate quo maxime impedit, explicabo voluptates blanditiis nisi fugiat quaerat. Quod laudantium,
+                    repudiandae odit aliquid error veniam sint ullam ut consectetur beatae eaque consequuntur totam
+                    corporis
+                    doloribus perferendis reiciendis dolorem facilis ex repellendus ratione sapiente? Dolor quo libero
+                    quisquam sunt repellendus, repellat ducimus saepe minus rem alias quidem excepturi voluptate?
+                    Dignissimos quidem iste, possimus provident corrupti quod odio ullam a autem debitis. Eius
+                    voluptatibus,
+                    vel quos ea tempora, doloremque quae in saepe ducimus, mollitia molestiae quo deleniti? Ad cum totam
+                    id
+                    distinctio quo quidem quia, cumque omnis quis voluptates dignissimos sunt deserunt ratione porro ut
+                    ab
+                    blanditiis sint molestias tenetur commodi inventore? Assumenda, officiis sequi. Nobis repellendus
+                    possimus odit accusantium, reprehenderit soluta excepturi deleniti. Provident beatae voluptates
+                    praesentium animi sit totam doloribus numquam accusamus harum obcaecati dicta, laborum blanditiis
+                    minima
+                    aliquam excepturi omnis autem mollitia ea et! Explicabo hic dignissimos delectus ducimus animi,
+                    neque
+                    quaerat voluptatum atque deserunt, possimus tempore facere nemo odit consectetur corporis itaque
+                    provident harum eligendi quidem. Illo et amet voluptates quas similique voluptatum expedita
+                    quibusdam
+                    facere laudantium. Eum dolorem consectetur nulla harum odio unde molestias blanditiis quisquam
+                    tenetur
+                    adipisci! Odit quidem vero corporis temporibus voluptates odio et veritatis non doloremque enim
+                    laboriosam alias consequatur excepturi laudantium cupiditate dolor nesciunt fugiat eius assumenda
+                    tenetur, sint ex necessitatibus architecto minima? Nam omnis dolor ad quis quod placeat fugiat
+                    numquam
+                    beatae, ducimus eos harum saepe, delectus perspiciatis, expedita suscipit iusto obcaecati veritatis
+                    praesentium molestiae. Provident, ipsum alias corrupti minima facere similique ad, quo quibusdam ut
+                    soluta eum iure hic nemo suscipit consequuntur voluptatibus sunt doloremque earum numquam quos amet.
+                </p>
+            </div>
         </section>
 
     </main>

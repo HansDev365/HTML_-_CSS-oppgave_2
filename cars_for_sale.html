@@ -8,6 +8,7 @@
     <!-- Styles.CC for Navigation bar and all websides -->
     <link rel="stylesheet" href="styles_nav-bar.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="image" href="images/AutoShop-90.png" type="image/png" fetchpriority="high">
     <!-- Google Fonts links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,17 @@
   <nav class="nav-bar">
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <img rel="preload" fetchpriority="high" rel="preload" fetchpriority="high" src="/images/AutoShop.png" alt="Auto Shop" width="90" />
+        <img
+          src="images/AutoShop-90.png"
+          srcset="images/AutoShop-90.png 1x, images/AutoShop-180.png 2x"
+          sizes="44px"
+          alt="Auto Shop"
+          width="90"
+          height="90"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
       </a>
 
       <ul class="nav-links">
