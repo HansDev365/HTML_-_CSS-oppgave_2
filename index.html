@@ -7,8 +7,8 @@
     <title>AutoShop</title>
 
     <!-- Navbar + main styles -->
-    <link rel="stylesheet" href="styles_nav-bar.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="CSS/styles_nav-bar.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
     <link rel="preload" as="image" href="images/AutoShop-90.png" type="image/png" fetchpriority="high">
 
     <!-- Google Fonts -->
@@ -34,7 +34,7 @@
                 <li><a class="nav__link" href="index.html">Home</a></li>
                 <li><a class="nav__link" href="#new-cars">New Cars</a></li>
                 <li><a class="nav__link" href="#news-videos">News &amp; Videos</a></li>
-                <li><a class="nav__link" href="cars_for_sale.html">Cars for Sale</a></li>
+                <li><a class="nav__link" href="HTML/cars_for_sale.html">Cars for Sale</a></li>
             </ul>
 
             <!-- mobile -->
@@ -49,13 +49,14 @@
         <a href="index.html" onclick="toggleMenu()">Home</a>
         <a href="#new-cars" onclick="toggleMenu()">New Cars</a>
         <a href="#news-videos" onclick="toggleMenu()">News &amp; Videos</a>
-        <a href="cars_for_sale.html" onclick="toggleMenu()">Cars for Sale</a>
+        <a href="HTML/cars_for_sale.html" onclick="toggleMenu()">Cars for Sale</a>
     </aside>
 
     <!-- MAIN CONTENT -->
     <main>
 
         <!--3 cards section -->
+        <!--SEDANS-->
         <section class="cars" id="home">
             <div class="cars-container">
                 <article class="car sedans">
@@ -66,9 +67,9 @@
                         spacious interior, large trunk, and stable handling, ensuring comfort, safety, and a classic
                         style.
                     </p>
-                    <a class="btn" href="sedans.html">Learn More</a>
+                    <a class="btn" href="HTML/sedans.html">Learn More</a>
                 </article>
-
+        <!--SUVS-->
                 <article class="car suvs">
                     <img src="images/icon-suvs.svg" alt="SUVs" width="64" height="40" decoding="async" />
                     <h2>SUVS</h2>
@@ -76,9 +77,9 @@
                         SUVs are versatile vehicles combining spaciousness, higher suspension, and powerful engines.
                         They perform well in the city and off-road, offering comfort, safety, and large cargo space.
                     </p>
-                    <a class="btn" href="suvs.html">Learn More</a>
+                    <a class="btn" href="HTML/suvs.html">Learn More</a>
                 </article>
-
+        <!--LUXURY-->
                 <article class="car luxury">
                     <img src="images/icon-luxury.svg" alt="Luxury" width="64" height="40" decoding="async" />
                     <h2>LUXURY</h2>
@@ -87,12 +88,13 @@
                         engines,
                         and premium interiors provide unforgettable driving experiences and maximum safety.
                     </p>
-                    <a class="btn" href="luxury.html">Learn More</a>
+                    <a class="btn" href="HTML/luxury.html">Learn More</a>
                 </article>
             </div>
         </section>
 
         <!-- Anchor targets so nav links work -->
+            <!--NEW CARS-->
         <section id="new-cars" class="anchor-section dark">
             <div class="container">
                 <h2>New Cars</h2>
@@ -108,7 +110,7 @@
                     costs at first, and the satisfaction of owning something completely new and dependable.</p>
             </div>
         </section>
-
+            <!--NEWS&VIDEOS-->
         <section id="news-videos" class="anchor-section">
             <div class="container">
                 <h2>News &amp; Videos</h2>
@@ -158,7 +160,7 @@
             Written by <a href="mailto:dorian365.kodehode@gmail.com">HansDev365</a>
         </address>
     </footer>
-
+<!--SCRIPT FOR SIDENAVBAR-->
     <script>
         function toggleMenu() {
             const sidebar = document.getElementById("sidebar");
